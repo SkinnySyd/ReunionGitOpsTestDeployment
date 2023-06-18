@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: skinnysyddocker/pylocaltest:4
+      - image: skinnysyddocker/pylocaltest:5
         name: flaskdemo
         resources: {}
 status: {}
