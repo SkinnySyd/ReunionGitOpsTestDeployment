@@ -20,7 +20,13 @@ spec:
       containers:
       - image: skinnysydcontainersregistry.azurecr.io/pylocaltest:21
         name: flaskdemo
-        resources: {}
+        resources:
+          requests:
+            memory: "256Mi"  # Request 256 megabytes of memory
+            cpu: "0.1"       # Request 0.1 CPU units
+          limits:
+            memory: "512Mi"  # Limit memory usage to 512 megabytes
+            cpu: "0.3"       # Limit CPU usage to 0.5 CPU units
 status: {}
 ---
 apiVersion: v1
