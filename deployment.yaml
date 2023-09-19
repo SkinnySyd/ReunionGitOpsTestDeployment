@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: skinnysydcontainersregistry.azurecr.io/pylocaltest:21
+      - image: skinnysydcontainersregistry.azurecr.io/pylocaltestpfe:21
         name: flaskdemo
         resources: {}
 status: {}
