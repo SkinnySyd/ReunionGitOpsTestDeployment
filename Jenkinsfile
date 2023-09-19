@@ -16,7 +16,7 @@ node {
                         sh "git config user.name SkinnySyd"
                         //sh "git switch master"
                         sh "cat deployment.yaml"
-                        sh "sed -i 's+skinnysydcontainersregistry.azurecr.io/pylocaltest.*+skinnysydcontainersregistry.azurecr.io/pylocaltest:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+skinnysydcontainersregistry.azurecr.io/pylocaltestpfe.*+skinnysydcontainersregistry.azurecr.io/pylocaltestpfe:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
