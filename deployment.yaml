@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: flaskdemodev
+  name: flaskdemodev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flaskdemo
+      app: flaskdemodev
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: flaskdemodev
     spec:
       containers:
-      - image: skinnysydcontainersregistry.azurecr.io/pylocaltest:21
-        name: flaskdemo
+      - image: skinnysydcontainersregistry.azurecr.io/pylocaltestpfe:24
+        name: flaskdemodev
         resources:
           requests:
             memory: "256Mi"  # Request 256 megabytes of memory
@@ -41,4 +41,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: flaskdemo
+    app: flaskdemodev
