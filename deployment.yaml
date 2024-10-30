@@ -21,6 +21,8 @@ spec:
       - image: pfecontainerregistry.azurecr.io/pylocaltestpfe:latest
         name: flaskdemo
         resources: {}
+      imagePullSecrets:
+      - name: acr-creds
 status: {}
 ---
 apiVersion: v1
